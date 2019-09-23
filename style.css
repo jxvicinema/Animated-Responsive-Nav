@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-nav-container {
+    display: flex;
+    justify-content: space-between;
+    background: rgb(201, 183, 183);
+    height: 10vh;
+}
+
+.main-nav-container ul {
+    display: flex;
+    
+}
+
+.main-nav-container li {
+    list-style: none;
+    margin: 0 1rem;
+    padding: 1rem 0;
+}
+
+.main-nav-container a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 0.2rem;
+
+}
+
+.main-banner {
+    background-image: url("/9kCLvxV.jpg");
+    background-position:  center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 90vh;
+}
+
+.navigator a:hover {
+    background: #333;
+    color: rgb(247, 191, 71);
+}
+
+
+
+
+@media (max-width: 768px) {
+    header {
+        position: relative;
+    }
+
+    .line {
+        width: 30px;
+        height: 3px;
+        background: #fff;
+        margin: 5px;
+        cursor: pointer;
+    }
+
+    .hamburger-container {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        z-index: 2;
+     
+    }
+
+    .navigator {
+        position: fixed;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        background: rgb(201, 183, 183);
+        clip-path: circle(100px at 90% -10%);
+       -webkit-clip-path:  circle(100px at 90% -20%);
+       transition: all 1s ease-out;
+
+        
+    }
+
+    .navigator.open {
+        clip-path: circle(1000px at 90% 10%);
+    -webkit-clip-path: circle(1000px at 90% 10%);
+    }
+
+    .navigator a {
+        color: #333;
+    }
+
+    
+}
